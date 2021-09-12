@@ -1,0 +1,7 @@
+.spacing {
+  letter-spacing: .2em;
+}
+
+.text-stretch {
+  transform: scale(1, 1.25);
+}

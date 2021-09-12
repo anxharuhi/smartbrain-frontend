@@ -1,0 +1,21 @@
+.logoBox{
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.logoBox-s {
+  height: 60px;
+  width: 60px;
+}
+
+.logoBox-s>img {
+   padding: .75rem;
+}
+
+.logoBox-m {
+  height: 90px;
+  width: 90px;
+}
+
+.logoBox-m>img {
+  padding: 1rem;
+}

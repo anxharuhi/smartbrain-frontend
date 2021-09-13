@@ -1,10 +1,10 @@
-# Smartbrain learning project
+# Smartbrain learning project - Frontend
 
 This project was made as a learning experience in making a web app.
 Comes from "The Complete Web Developer in 2021: Zero to Mastery" course from [@aneagoie]("https://github.com/aneagoie").
 Functionality is simple, put an image in and it will detect if there are any faces on it using Clarifai AI pretrained model for that purpose.
 Outside of that, it also has a very simple login/signup form.
-This project uses [React](http://reactjs.com) via [create-react-app](https://create-react-app.dev/) as the framework, [tachyons](https://tachyons.io/) as the CSS toolkit, and [tsparticles](https://github.com/matteobruni/tsparticles) for the cool background.
+This is the frontend  part of the project, which uses [React](http://reactjs.com) via [create-react-app](https://create-react-app.dev/) as the framework, [tachyons](https://tachyons.io/) as the CSS toolkit, and [tsparticles](https://github.com/matteobruni/tsparticles) for the cool background.
 
 ## Getting started
 

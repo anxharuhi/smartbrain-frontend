@@ -31,18 +31,11 @@ const cleanState = {
 }
 
 class App extends Component {
-  // HACK: Detach Initial state from setting state, so we can reset the state on route change if needed.
   constructor() {
     super();
     this.server = 'http://localhost:3010';
     this.state = cleanState;
   }
-
-
-  // TODO:: Clean state when signing out
-  // componentDidUpdate() {
-  //  console.log('componentDidUpdate ran')
-  // }
 
   // FIX: Move Clarifai logic to the backend
   predictFaces = () => {
@@ -110,7 +103,6 @@ class App extends Component {
 
   onRouteChange = (route) => {
     this.setState({route: route});
-    // NOTE: This belongs on componentDidUpdate
     if(route !== 'home') {
       this.setState(cleanState)
     }

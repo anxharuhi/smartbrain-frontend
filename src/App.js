@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Clarifai from 'clarifai';
 import 'tachyons';
 import BackgroundParticles from './components/BackgroundParticles/BackgroundParticles';
 import SignIn from './components/SignIn/SignIn';
@@ -10,10 +9,6 @@ import Rank from './components/Rank/Rank';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import './App.css';
 
-const app = new Clarifai.App({
-  // WARN: Move Clarifai to the backend
-  apiKey: 'INSERT YOUR API KEY HERE'
-});
 
 const cleanState = {
   input: '',
@@ -37,10 +32,16 @@ class App extends Component {
     this.state = cleanState;
   }
 
-  // FIX: Move Clarifai logic to the backend
   predictFaces = () => {
-    app.models.predict('f76196b43bbd45c99b4f3cd8e8b40a8a', this.state.imageUrl)
-      .then(response => {
+    fetch(this.server + '/imageurl', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        input: this.state.imageUrl
+      })
+    })
+   .then(response => response.json())
+   .then(response => {
         if(response) {
           this.updateImageCount();
           this.displayFaces(this.calculateFaceLocation(response));

@@ -28,7 +28,7 @@ const cleanState = {
 class App extends Component {
   constructor() {
     super();
-    this.server = 'http://localhost:3010';
+    this.server = 'https://damp-ravine-25441.herokuapp.com';
     this.state = cleanState;
   }
 
@@ -104,7 +104,7 @@ class App extends Component {
 
   onRouteChange = (route) => {
     this.setState({route: route});
-    if(route !== 'home') {
+    if(route === 'signin') {
       this.setState(cleanState)
     }
   }
